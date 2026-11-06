@@ -564,6 +564,7 @@ document.querySelectorAll('[data-split]').forEach(split);
 
 function build(){
   if(!G||!window.ScrollTrigger)return;
+  if(lite){document.querySelectorAll('#lead .w').forEach(function(w){w.style.color='#D8D3C4';});return;}
   G.to('#lead .w',{color:'#D8D3C4',stagger:.06,ease:'none',scrollTrigger:{trigger:'#lead',start:'top 82%',end:'bottom 50%',scrub:true}});
   if(reduce||lite)return;
   if(!lite)G.to('#heroImg',{yPercent:10,ease:'none',scrollTrigger:{trigger:'#hero',start:'top top',end:'bottom top',scrub:true}});
