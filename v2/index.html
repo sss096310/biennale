@@ -593,5 +593,5 @@ function boot(){if(boot.d)return;boot.d=true;
 G&&G.to(nv,{v:.72,duration:1.1,onUpdate:function(){sn(nv.v);}});
 var hi=$('heroImg');if(hi.complete)boot();else{hi.onload=boot;hi.onerror=boot;}
 setTimeout(boot,4800);
-addEventListener('resize',function(){if(G&&window.ScrollTrigger)ScrollTrigger.refresh();});
+var lastW=innerWidth;addEventListener('resize',function(){if(innerWidth===lastW)return;lastW=innerWidth;if(G&&window.ScrollTrigger)ScrollTrigger.refresh();});
 </script></body></html>
